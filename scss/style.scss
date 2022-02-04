@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap");
 
 $color-main: #3f51b5;
 $color-accent: #e81919;
@@ -8,8 +8,8 @@ $color-text: #333333;
 Xのデザイン指定は幅1280px、両側40pxの余白 */
 $layout-width-inner: 1200px;
 
-$font-en: 'Lato', sans-serif;
-$font-ja: 'Noto Sans JP', sans-serif;
+$font-en: "Lato", sans-serif;
+$font-ja: "Noto Sans JP", sans-serif;
 
 /* ブレークポイント */
 $breakpoints: (
@@ -189,15 +189,15 @@ a {
       text-decoration: none;
       position: relative;
 
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: -8px;
-          left: 0;
-          width: 100%;
-          height: 2px;
-          background: transparent;
-          transition: all 0.3s ease 0s;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: transparent;
+        transition: all 0.3s ease 0s;
       }
       &:hover,
       &.is-active {
@@ -232,7 +232,8 @@ a {
   text-align: center;
   width: 100%;
 
-  @include mq('sp') {    //元の指定の戻す
+  @include mq("sp") {
+    //元の指定の戻す
     padding-left: 46px;
     padding-right: 46px;
   }
@@ -277,7 +278,7 @@ a {
     border-radius: 12px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     text-decoration: none;
-    transition: all .3s ease 0s;
+    transition: all 0.3s ease 0s;
 
     &:hover {
       opacity: 0.7;
@@ -309,7 +310,7 @@ a {
     margin-top: 42px;
   }
 }
-.card_item {
+.card__item {
   //余白である２４px2つぶんを3つのパーツで分割して3等分する
   width: calc(33.3% - 24px * 2 / 3);
   background-color: #fff;
@@ -351,25 +352,25 @@ a {
       margin-top: 24px;
     }
   }
-}
-.card_img {
 
-  img {
-    width: 100%;
-    height: 195px;
+  &__img {
+    img {
+      width: 100%;
+      height: 195px;
+    }
   }
-}
 
-.card_title {
-  font-size: 20px;
-  font-weight: 700;
-  margin-top: 4px;
-}
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 4px;
+  }
 
-.card_text {
-  font-weight: 700;
-  line-height: (24/16);
-  margin-top: 5px;
+  &__text {
+    font-weight: 700;
+    line-height: (24/16);
+    margin-top: 5px;
+  }
 }
 
 //==============
@@ -395,7 +396,7 @@ a {
   }
 }
 
-.news_item {
+.news-item {
   display: flex;
   padding: 20px 0 12px; //上下の余白
 
@@ -407,69 +408,69 @@ a {
   @include mq("sp") {
     display: block;
   }
-}
 
-.news_meta {
-  display: flex;
-  width: 185px; //日付とラベルの合計値 固定し、改行されないようにする。
-}
-.news_date {
-  width: 105px; //dateのwidthとラベルとの余白
-  padding-top: 3px; //ラベルにあわせて中央揃え
-  font-family: $font-en;
-}
-
-.news_label {
-  a {
-    display: inline-block;
-    width: 80px;
-    height: 32px;
-    line-height: 32px; //上下中央に配置する
-    color: #fff;
-    text-align: center;
-    background-color: #666666;
-    border-radius: 4px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.3s ease 0s;
-
-    &:hover {
-      opacity: 0.7;
-    }
-
-
-    &.is_blue {
-      background: #3f51b5; //&を忘れずに！！！！！
-    }
-
-    &.is_red {
-      background: #e81919;
-    }
+  &__meta {
+    display: flex;
+    width: 185px; //日付とラベルの合計値 固定し、改行されないようにする。
   }
-}
 
-.news_title {
-  width: calc(
-    100% - 185px
-  ); //大きさが可変していくとそれに合わせて大きさが変わる
-  padding-left: 20px;
-  line-height: 20px /16px; //行間の値
-  padding-top: 4px;
+  &__date {
+    width: 105px; //dateのwidthとラベルとの余白
+    padding-top: 3px; //ラベルにあわせて中央揃え
+    font-family: $font-en;
+  }
 
-  a {
-    text-decoration: none;
-    transition: all 0.3s ease 0s;
+  &__label {
+    a {
+      display: inline-block;
+      width: 80px;
+      height: 32px;
+      line-height: 32px; //上下中央に配置する
+      color: #fff;
+      text-align: center;
+      background-color: #666666;
+      border-radius: 4px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s ease 0s;
 
-    &:hover {
-      opacity: 0.7s;
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &.is_blue {
+        background: #3f51b5; //&を忘れずに！！！！！
+      }
+
+      &.is_red {
+        background: #e81919;
+      }
     }
   }
 
-  //スマホ版
-  @include mq("sp") {
-    width: 100%;
-    padding-top: 0;
-    margin-top: 6px;
+  &__title {
+    width: calc(
+      100% - 185px
+    ); //大きさが可変していくとそれに合わせて大きさが変わる
+    padding-left: 20px;
+    line-height: 20px /16px; //行間の値
+    padding-top: 4px;
+
+    a {
+      text-decoration: none;
+      transition: all 0.3s ease 0s;
+
+      &:hover {
+        opacity: 0.7s;
+      }
+    }
+
+    //スマホ版
+    @include mq("sp") {
+      width: 100%;
+      padding-top: 0;
+      margin-top: 6px;
+    }
   }
 }
 
@@ -531,7 +532,6 @@ a {
   @include mq("sp") {
     width: 100%;
   }
-  
 }
 
 .price_table {
@@ -692,7 +692,6 @@ a {
   background: #efefef;
 }
 
-
 .contact_form {
   margin: 80px auto 0;
   width: 800px;
@@ -700,7 +699,8 @@ a {
   background: #fff;
   padding: 60px;
 
-  @include mq("sp") {      //幅をしている箇所につける
+  @include mq("sp") {
+    //幅をしている箇所につける
     margin-top: 40px;
     padding: 24px;
   }
@@ -712,7 +712,8 @@ a {
   &:not(first-child) {
     margin-top: 60px;
 
-    @include mq("sp") {      //幅をしている箇所につける
+    @include mq("sp") {
+      //幅をしている箇所につける
       margin-top: 30px;
     }
   }
@@ -722,17 +723,15 @@ a {
   }
 }
 
-
 .contact-form-label {
   width: 160px; //左のラベルは160pxで固定しておく
   padding: 5px 0 0;
   margin: 0;
-    
 
-  @include mq("sp") {      //幅をしている箇所につける
+  @include mq("sp") {
+    //幅をしている箇所につける
     width: 100%;
   }
-
 
   label {
     font-weight: 700;
@@ -773,8 +772,8 @@ a {
   margin: 0;
   padding: 0;
 
-
-  @include mq("sp") {      //幅を指定している箇所につける
+  @include mq("sp") {
+    //幅を指定している箇所につける
     width: 100%;
     margin-top: 5px;
   }
@@ -843,7 +842,6 @@ a {
 .contact-form-radio {
   margin-top: 32px;
 
-
   @include mq("sp") {
     margin-top: 15px;
   }
@@ -905,8 +903,6 @@ a {
     margin-top: 30px;
   }
 
-  
-
   span {
     display: inline-block;
     padding-left: 49px;
@@ -956,16 +952,16 @@ a {
   margin-top: 32px;
   text-align: center;
 
-
   [type="submit"] {
-    background: $color-main url(/img/button-arrow@2x.png) no-repeat right 12px center /17px 16px;
+    background: $color-main url(/img/button-arrow@2x.png) no-repeat right 12px
+      center / 17px 16px;
     width: 304px;
     display: inline-block;
     font-weight: 700;
     color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 3px 6px rgba(#000,0.16);
+    box-shadow: 0 3px 6px rgba(#000, 0.16);
     appearance: none;
     font-family: inherit;
     cursor: pointer;
@@ -977,9 +973,8 @@ a {
   }
 }
 
-
 .footer {
-  background:  linear-gradient(to bottom, #666666,#333333);
+  background: linear-gradient(to bottom, #666666, #333333);
   padding: 60px 0 24px;
   color: #fff;
 
@@ -1016,8 +1011,6 @@ a {
   font-size: 14px;
 }
 
-
-
 .footer-address {
   margin-top: 32px;
 
@@ -1026,7 +1019,7 @@ a {
   }
 }
 
-.footer-tell{
+.footer-tell {
   margin-top: 14px;
 
   @include mq("sp") {
@@ -1036,7 +1029,6 @@ a {
 
 .footer-center {
   width: 48%;
-
 
   @include mq("sp") {
     width: 100%;
@@ -1064,10 +1056,9 @@ a {
 
       &:hover {
         opacity: 0.7;
-    }
+      }
     }
   }
-
 }
 
 .footer-right {
@@ -1082,19 +1073,16 @@ a {
   display: flex;
   justify-content: flex-end;
 
-
   @include mq("sp") {
     margin-top: 24px;
     justify-content: center;
   }
 
-
-
   li {
     &:not(first-child) {
       margin-left: 16px;
     }
-    
+
     a {
       text-decoration: none;
       transition: all 0.3s ease 0s;
@@ -1125,24 +1113,22 @@ a {
   right: 24px;
   bottom: 24px;
   opacity: 0;
-// 見えてはいないけど実際は存在する 最初は見えないようにしておく{
-  visibility: hidden;   
+  // 見えてはいないけど実際は存在する 最初は見えないようにしておく{
+  visibility: hidden;
   transition: all 0.3 ease 0s;
 
   &.is-show {
-  opacity: 1;
-  visibility: visible;
-  }                       //}
+    opacity: 1;
+    visibility: visible;
+  } //}
 
-@include mq("sp") {
+  @include mq("sp") {
     right: 12px;
-  bottom: 12px;
-
+    bottom: 12px;
   }
   a {
     text-decoration: none;
     transition: all 0.3s ease 0s;
-
 
     :hover {
       opacity: 0.7;
@@ -1155,74 +1141,75 @@ a {
       }
     }
   }
-
-
 }
 
 .swiper-button-next {
   width: 40px;
   height: 40px;
   margin-top: -20px;
-  background: transparent url(/img/arrow-next@2x.png) no-repeat center center / contain;
+  background: transparent url(/img/arrow-next@2x.png) no-repeat center center /
+    contain;
   right: calc(50% - #{$layout-width-inner / 2});
 
   &::after {
-    display: none;  //元の画像を消す
+    display: none; //元の画像を消す
   }
 
-  @include mq('tab') {    //元の指定の戻す
+  @include mq("tab") {
+    //元の指定の戻す
     right: 10px;
   }
 
-  @include mq('sp') {    //元の指定の戻す
+  @include mq("sp") {
+    //元の指定の戻す
     right: 10px;
   }
-
 }
-
 
 // 検証ツールでクラスを探し、変更していく
 .swiper-button-prev {
   width: 40px;
   height: 40px;
   margin-top: -20px;
-  background: transparent url(/img/arrow-prev@2x.png) no-repeat center center / contain;
-  left: calc(50% - #{$layout-width-inner / 2});  //インナー幅に合うようにする
+  background: transparent url(/img/arrow-prev@2x.png) no-repeat center center /
+    contain;
+  left: calc(50% - #{$layout-width-inner / 2}); //インナー幅に合うようにする
   &::after {
-    display: none;  //元の画像を消す
+    display: none; //元の画像を消す
   }
 
-  @include mq('tab') {
-  left: 10px;
-  }
-  @include mq('sp') {    //元の指定の戻す
+  @include mq("tab") {
     left: 10px;
   }
-
+  @include mq("sp") {
+    //元の指定の戻す
+    left: 10px;
+  }
 }
 
 .swiper-pagination-bullet {
-  width: 16px;             //元のサイズを上書き
-  height: 16px; 
+  width: 16px; //元のサイズを上書き
+  height: 16px;
   background: #fff;
-  opacity: 1;  //透過度を１にし表示されるようにする
+  opacity: 1; //透過度を１にし表示されるようにする
 }
 
-
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bulle {
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bulle {
   margin-right: 8px;
   margin-left: 8px;
 }
 
 .swiper-pagination-bullet-active {
-  background: #2F7DC8;
+  background: #2f7dc8;
 }
 
 .drawer-icon {
   position: fixed;
   top: 20px;
   right: 16px;
-  z-index: 300;    //headerのz-indexが100のためそれ以上を指定
+  z-index: 300; //headerのz-indexが100のためそれ以上を指定
   display: none;
   transition: transform 0.5s ease 0s;
 
@@ -1230,26 +1217,24 @@ a {
     display: block;
   }
 
-
   &.is-active {
     //線を２本に減らし、✖️を作る
-    transform: translateX(-200px);   //コンテンツの分だけずらす
+    transform: translateX(-200px); //コンテンツの分だけずらす
 
     .drawer-icon-bar1 {
       transform: rotate(45deg);
-      top: 8px;        //topの位置を揃える
+      top: 8px; //topの位置を揃える
     }
-    
-    .drawer-icon-bar2 {  
-      display: none;            //✖️は２本線のため、消しておく  
+
+    .drawer-icon-bar2 {
+      display: none; //✖️は２本線のため、消しておく
     }
-    
+
     .drawer-icon-bar3 {
       transform: rotate(-45deg);
       top: 8px;
     }
   }
-
 }
 .drawer-icon-bars {
   width: 22px;
@@ -1265,17 +1250,17 @@ a {
   width: 22px;
   height: 4px;
   background: #fff;
-  top: 0;               //icon-barsに重なる感覚
+  top: 0; //icon-barsに重なる感覚
   left: 0;
 }
-
 
 //位置をずらし、３本線にする
 .drawer-icon-bar1 {
   top: 0;
 }
 
-.drawer-icon-bar2 {           //幅4px + 余白4px 
+.drawer-icon-bar2 {
+  //幅4px + 余白4px
   top: 8px;
 }
 
@@ -1291,10 +1276,9 @@ a {
   right: 0;
   background: #fff;
   box-shadow: 0 0 3px rgba(#000, 0.16);
-  display: none;  //元々は表示されていないため、画面の外に出しておく
-  z-index: 299;  //アイコンのz-index (300)より小さくする
+  display: none; //元々は表示されていないため、画面の外に出しておく
+  z-index: 299; //アイコンのz-index (300)より小さくする
   transition: transform 0.5s ease 0s;
-
 
   &.is-active {
     display: block;
@@ -1309,8 +1293,6 @@ a {
     color: #707070;
     text-decoration: none;
     position: relative;
-    
-    
 
     &::after {
       content: "";
@@ -1323,7 +1305,6 @@ a {
       background: url(/img/arrow-b@2x.png) no-repeat center center / contain;
     }
   }
-
 }
 
 .drawer-background {
@@ -1349,13 +1330,11 @@ a {
   width: 900px;
   max-width: 100%;
   margin: 80px auto 0;
-
 }
 .qa-item {
-  
   &:nth-child(n + 2) {
     margin-top: 24px;
-}
+  }
 }
 
 .qa-box {
@@ -1363,18 +1342,17 @@ a {
 }
 
 .qa-box-q {
-background: $color-main;
+  background: $color-main;
   color: #fff;
-  padding: 12px 56px;  //クリックのクから幅の端まで
+  padding: 12px 56px; //クリックのクから幅の端まで
   font-weight: 700;
   position: relative;
 
   &::before {
-  content: 'Q';
-  position: absolute;
-  top: 12px;
-  left: 20px;
-
+    content: "Q";
+    position: absolute;
+    top: 12px;
+    left: 20px;
   }
 }
 
@@ -1393,20 +1371,21 @@ background: $color-main;
   }
 }
 
-.qa-box-ber1 {      //横
+.qa-box-ber1 {
+  //横
   width: 14px;
   height: 2px;
   background: #fff;
   border-radius: 20px;
   position: absolute;
-  top: 50%;                               //上下中央
+  top: 50%; //上下中央
   transform: translateY(-50%);
   left: 0;
-
 }
 
-.qa-box-ber2 {     //縦
-  height: 14px;                            //左右中央
+.qa-box-ber2 {
+  //縦
+  height: 14px; //左右中央
   width: 2px;
   background: #fff;
   border-radius: 20px;
@@ -1421,19 +1400,19 @@ background: $color-main;
   background: #fff;
   color: $color-main;
   font-weight: 700;
-  line-height: (24 / 16);  
-  padding: 16px 30px 16px 20px;     //Aも入れた状態で
+  line-height: (24 / 16);
+  padding: 16px 30px 16px 20px; //Aも入れた状態で
   display: none;
 }
 
 .qa-box-content {
   position: relative;
-  padding-left: 35px;         //Aの幅とAからテキストまでの余白の合計
+  padding-left: 35px; //Aの幅とAからテキストまでの余白の合計
 
   &::before {
     content: "A";
     position: absolute;
-    top: 0;                 //qa-box-contentを起点にしているため
+    top: 0; //qa-box-contentを起点にしているため
     left: 0;
   }
 }
@@ -1442,7 +1421,7 @@ background: $color-main;
 .modal-contact {
   background: #fff;
   width: 900px;
-  max-width: calc(100% - 24px * 2);    //900以下になったとき余白が崩れないように
+  max-width: calc(100% - 24px * 2); //900以下になったとき余白が崩れないように
   height: 652px;
   max-height: calc(100% - 24px * 2);
   z-index: 501;
@@ -1465,7 +1444,7 @@ background: $color-main;
   font-size: 24px;
   font-weight: 700;
   color: #707070;
-  padding-bottom: 24px;         //バーの分を用意する
+  padding-bottom: 24px; //バーの分を用意する
   position: relative;
   text-align: center;
 
@@ -1477,32 +1456,33 @@ background: $color-main;
     bottom: 0;
     width: 100px;
     height: 2px;
-    background: #3F51B5;
+    background: #3f51b5;
   }
 }
 
 .modal-content {
   margin-top: 40px;
-  height: calc(100% - 84px - 108px);   //ヘッドのエリア分とボタンから下の部分を引く
+  height: calc(
+    100% - 84px - 108px
+  ); //ヘッドのエリア分とボタンから下の部分を引く
   overflow: auto; //はみでた分をスクロールする
 
   @include mq("sp") {
     margin-top: 20px;
   }
-  
 }
 
 .modal-content-subhead {
   font-size: 20px;
   font-weight: bold;
-  padding-left: 20px;     //縦線の分の余白を作る
+  padding-left: 20px; //縦線の分の余白を作る
   position: relative;
   margin-top: 40px;
 
-  >:first-child {
-    margin-top: 0;          //>はコンテンツ要素に対して
+  > :first-child {
+    margin-top: 0; //>はコンテンツ要素に対して
   }
-  
+
   &::before {
     content: "";
     position: absolute;
@@ -1526,22 +1506,22 @@ background: $color-main;
   text-align: center;
 
   a {
-      text-decoration: none;
-      display: inline-block;
-      width: 176px;
-      padding: 14px;
-      text-align: center;
-      color: #fff;
-      background: $color-main;
-      font-weight: 700;
-      border-radius: 8px;
-      box-shadow: 0 3px 6px rgba(#000,0.16);
+    text-decoration: none;
+    display: inline-block;
+    width: 176px;
+    padding: 14px;
+    text-align: center;
+    color: #fff;
+    background: $color-main;
+    font-weight: 700;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(#000, 0.16);
   }
 }
 .modal-icon {
   position: absolute;
   width: 40px;
-  height: 40px;      //modal-contactからはみ出る
+  height: 40px; //modal-contactからはみ出る
   top: -20px;
   right: -20px;
   a {
@@ -1555,13 +1535,12 @@ background: $color-main;
   left: 0;
   width: 100%;
   height: 100%;
-  background:rgba(#000000, 0.3);
-  z-index: 500;           
+  background: rgba(#000000, 0.3);
+  z-index: 500;
 }
 
-
-.qa-q{
-  color: #2F7DC8;
+.qa-q {
+  color: #2f7dc8;
   background: #fff;
   padding: 12px 56px;
   font-weight: bold;
@@ -1577,7 +1556,7 @@ background: $color-main;
     padding: 3px 6px;
   }
 }
-.qa-icon{
+.qa-icon {
   width: 14px;
   height: 14px;
   position: absolute;
@@ -1591,43 +1570,41 @@ background: $color-main;
     }
   }
 
-
-.qa-ber1{
-  width: 14px;
-  height: 2px;
-  background: #2F7DC8;
-  border-radius: 20px;
-  position: absolute;    //iconに対してpositionを指定する
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-
+  .qa-ber1 {
+    width: 14px;
+    height: 2px;
+    background: #2f7dc8;
+    border-radius: 20px;
+    position: absolute; //iconに対してpositionを指定する
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+  .qa-ber2 {
+    //左右中央
+    width: 2px;
+    height: 14px;
+    background: #2f7dc8;
+    border-radius: 20px;
+    position: absolute; //iconに対してpositionを指定する
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    transition: all 0.3s ease 0s;
+  }
 }
-.qa-ber2{            //左右中央
-  width: 2px;
-  height: 14px;
-  background: #2F7DC8;
-  border-radius: 20px;
-  position: absolute;    //iconに対してpositionを指定する
-  left: 50%;
-  transform: translateX(-50%);
-  top: 0;
-  transition: all .3s ease 0s;
-}
-}
-.qa-a{
+.qa-a {
   background: #fff;
   padding: 16px 30px 13px 20px;
   display: none;
 }
-.qa-a-content{
+.qa-a-content {
   position: relative;
-  padding-left: 30px;     //アイコン分の幅を作る
-  
+  padding-left: 30px; //アイコン分の幅を作る
 
   &::before {
     position: absolute;
-    content:"A";
+    content: "A";
     top: 0;
     left: 0;
   }
