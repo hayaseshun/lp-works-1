@@ -298,8 +298,6 @@ a {
 .card {
   background: #efefef;
 }
-.card_inner {
-}
 
 .card_items {
   margin-top: 80px;
@@ -385,11 +383,6 @@ a {
   @include mq("sp") {
     padding-top: 40px;
   }
-}
-
-.news_inner {
-}
-.news_head {
 }
 
 .news_items {
@@ -521,12 +514,6 @@ a {
   background-color: #efefef;
 }
 
-.price_inner {
-}
-
-.price_head {
-}
-
 .price_content {
   display: flex;
   margin-top: 80px;
@@ -544,8 +531,7 @@ a {
   @include mq("sp") {
     width: 100%;
   }
-  img {
-  }
+  
 }
 
 .price_table {
@@ -615,13 +601,6 @@ a {
 //====================
 //access
 //====================
-
-.access {
-}
-
-.access_inner {
-}
-
 .access_map {
   margin: 80px auto 0;
   width: 800px;
@@ -1010,11 +989,6 @@ a {
   }
 }
 
-
-.footer-inner {
-
-}
-
 .footer-content {
   display: flex;
 
@@ -1032,10 +1006,6 @@ a {
 }
 
 .footer-logo {
-  a {
-
-  }
-
   img {
     width: 205px;
   }
@@ -1331,10 +1301,6 @@ a {
   }
 }
 
-.drawer-icon-items {
-
-}
-
 .drawer-icon-item {
   border-bottom: 1px dotted #000;
   a {
@@ -1376,19 +1342,9 @@ a {
 }
 
 //q&a
-
-.qa {
-
-}
-
 .qa-inner {
   margin: 100px auto 120px;
 }
-
-.qa-head {
-
-}
-
 .qa-items {
   width: 900px;
   max-width: 100%;
