@@ -23,7 +23,7 @@ jQuery('.drawer-icon').on('click',function(e) {  //セットで覚える
   e.preventDefault();      //aタグ本来の動きを無効
 
   jQuery('.drawer-icon').toggleClass('is-active');
-  jQuery('.q-a-answer').toggleClass('is-active');
+  jQuery('.q-a__answer').toggleClass('is-active');
   jQuery('.drawer-background').toggleClass('is-active');
 });
 
@@ -55,7 +55,7 @@ jQuery('.header_nav li a').on('click', function(){
   jQuery(this).addClass('is-active');
 });
 
-jQuery('.qa-box-q').on('click',function() {
+jQuery('.qa-box__q').on('click',function() {
   jQuery(this).next().slideToggle();    //  クリックされた要素の次の要素
   jQuery(this).children().toggleClass('is-open');
 });
