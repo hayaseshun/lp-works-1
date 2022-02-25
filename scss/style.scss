@@ -1339,83 +1339,84 @@ a {
 
 .qa-box {
   border: 1px solid $color-main;
-}
 
-.qa-box-q {
-  background: $color-main;
-  color: #fff;
-  padding: 12px 56px; //クリックのクから幅の端まで
-  font-weight: 700;
-  position: relative;
+  &__q {
+    background: $color-main;
+    color: #fff;
+    padding: 12px 56px; //クリックのクから幅の端まで
+    font-weight: 700;
+    position: relative;
 
-  &::before {
-    content: "Q";
-    position: absolute;
-    top: 12px;
-    left: 20px;
+    &::before {
+      content: "Q";
+      position: absolute;
+      top: 12px;
+      left: 20px;
+    }
   }
-}
 
-.qa-box-icon {
-  width: 14px;
-  height: 14px;
-  position: absolute;
-  right: 14px;
-  top: 50%;
-  transform: translateY(-50%);
+  &__icon {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
 
-  &.is-open {
-    .qa-box-ber2 {
-      transform: rotate(90deg);
+    &.is-open {
+      .qa-box-ber2 {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__ber1 {
+    //横
+    width: 14px;
+    height: 2px;
+    background: #fff;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%; //上下中央
+    transform: translateY(-50%);
+    left: 0;
+  }
+
+  &__ber2 {
+    //縦
+    height: 14px; //左右中央
+    width: 2px;
+    background: #fff;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    transition: all 0.3s ease 0s;
+  }
+
+  &__a {
+    background: #fff;
+    color: $color-main;
+    font-weight: 700;
+    line-height: (24 / 16);
+    padding: 16px 30px 16px 20px; //Aも入れた状態で
+    display: none;
+  }
+
+  &__content {
+    position: relative;
+    padding-left: 35px; //Aの幅とAからテキストまでの余白の合計
+
+    &::before {
+      content: "A";
+      position: absolute;
+      top: 0; //qa-box-contentを起点にしているため
+      left: 0;
     }
   }
 }
 
-.qa-box-ber1 {
-  //横
-  width: 14px;
-  height: 2px;
-  background: #fff;
-  border-radius: 20px;
-  position: absolute;
-  top: 50%; //上下中央
-  transform: translateY(-50%);
-  left: 0;
-}
-
-.qa-box-ber2 {
-  //縦
-  height: 14px; //左右中央
-  width: 2px;
-  background: #fff;
-  border-radius: 20px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 0;
-  transition: all 0.3s ease 0s;
-}
-
-.qa-box-a {
-  background: #fff;
-  color: $color-main;
-  font-weight: 700;
-  line-height: (24 / 16);
-  padding: 16px 30px 16px 20px; //Aも入れた状態で
-  display: none;
-}
-
-.qa-box-content {
-  position: relative;
-  padding-left: 35px; //Aの幅とAからテキストまでの余白の合計
-
-  &::before {
-    content: "A";
-    position: absolute;
-    top: 0; //qa-box-contentを起点にしているため
-    left: 0;
-  }
-}
 
 //お問い合わせフォームのモーダル
 .modal-contact {
