@@ -595,7 +595,7 @@ a {
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
-  background: url(/img/button-arrow@2x.png) no-repeat center center/contain;
+  background: url(/img/button-arrow.png) no-repeat center center/contain;
   width: 17px;
   height: 16px;
 }
@@ -726,7 +726,7 @@ a {
   font-family: inherit;
   font-size: 14px;
   width: 100%;
-  background: #fff url(/img/select-arrow@2x.png) no-repeat right 12px center/17px 14px;
+  background: #fff url(/img/select-arrow.png) no-repeat right 12px center/17px 14px;
 }
 .contact-form-input textarea {
   box-shadow: none;
@@ -831,7 +831,7 @@ a {
   top: 50%;
   transform: translateY(-50%);
   left: 0;
-  background: url(/img/checkbox@2x.png) no-repeat center center/contain;
+  background: url(/img/checkbox.png) no-repeat center center/contain;
   display: none;
 }
 .contact-form-check span a {
@@ -850,7 +850,7 @@ a {
   text-align: center;
 }
 .contact-form-button [type=submit] {
-  background: #3f51b5 url(/img/button-arrow@2x.png) no-repeat right 12px center/17px 16px;
+  background: #3f51b5 url(/img/button-arrow.png) no-repeat right 12px center/17px 16px;
   width: 304px;
   display: inline-block;
   font-weight: 700;
@@ -1042,7 +1042,7 @@ a {
   width: 40px;
   height: 40px;
   margin-top: -20px;
-  background: transparent url(/img/arrow-next@2x.png) no-repeat center center/contain;
+  background: transparent url(/img/arrow-next.png) no-repeat center center/contain;
   right: calc(50% - 600px);
 }
 .swiper-button-next::after {
@@ -1063,7 +1063,7 @@ a {
   width: 40px;
   height: 40px;
   margin-top: -20px;
-  background: transparent url(/img/arrow-prev@2x.png) no-repeat center center/contain;
+  background: transparent url(/img/arrow-prev.png) no-repeat center center/contain;
   left: calc(50% - 600px);
 }
 .swiper-button-prev::after {
@@ -1189,7 +1189,7 @@ a {
   transform: translateY(-50%);
   width: 8px;
   height: 11px;
-  background: url(/img/arrow-b@2x.png) no-repeat center center/contain;
+  background: url(/img/arrow-b.png) no-repeat center center/contain;
 }
 
 .drawer-background {
