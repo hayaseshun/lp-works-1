@@ -39,10 +39,10 @@ function compileSass() {
 
 //scssファイルを更新されたらコンパイル->リロードされる
 function watch() {
-  gulp.watch(".src/assets/sass/**/*.scss", gulp.series(compileSass, browserReload));  
-  gulp.watch(".src/assets/js/**/*.js", gulp.series(minJs, browserReload));  
-  gulp.watch(".src/assets/img/**/*", gulp.series(copyImage, browserReload));  
-  gulp.watch(".src/assets/**/*.html", gulp.series(formatHTML, browserReload));  
+  gulp.watch("./src/assets/sass/**/*.scss", gulp.series(compileSass, browserReload));  
+  gulp.watch("./src/assets/js/**/*.js", gulp.series(minJs, browserReload));  
+  gulp.watch("./src/assets/img/**/*", gulp.series(copyImage, browserReload));  
+  gulp.watch("./src/assets/**/*.html", gulp.series(formatHTML, browserReload));  
 }
 
 function browserInit() {
